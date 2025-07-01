@@ -1,14 +1,11 @@
-install.packages("ggplot2")
 library(ggplot2)
 library(reshape2)
 
 dim(tips)
 table(tips)
 names(tips)
-table(time)
 
-
-ggplottime()ggplot(tips, aes(x = total_bill, y = tip, colour = sex)) +
+ggplot(tips, aes(x = total_bill, y = tip, colour = sex)) +
   geom_point()
 
 ggplot(tips, aes(x = total_bill, y = tip, shape = sex)) +
@@ -73,9 +70,9 @@ ggplot(sex_data, aes(x = "", y = value, fill = group))+
 ggplot(tips, aes(tip, colour = smoker)) +
   geom_density()
 
-covid_data = read.csv("C:\\Users\\USER\\Downloads\\corona_data.csv")
+covid_data = read.csv("C:\\Users\\guddn\\Desktop\\R_Language\\corona_data.csv")
 head(covid_data)
-covid_data$Date = as.Date(covid_data$Date) # 오른쪽 data를 왼쪽 데이터로 덮어씌운다다
+covid_data$Date = as.Date(covid_data$Date) # 오른쪽 data를 왼쪽 데이터로 덮어씌운다
 class(covid_data$Date)
 
 plot(covid_data$Date, covid_data$new_case, type = "l") # plot(x축, y축, type)
@@ -86,3 +83,4 @@ ggplot(covid_data, aes(Date, new_case,
                        group = Season,
                        colour = Season)) +
   geom_line()
+

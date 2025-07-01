@@ -1,4 +1,4 @@
-netflix_data = read.csv("C:\\Users\\USER\\Downloads\\NetflixOriginals.csv")
+netflix_data = read.csv("C:\\Users\\guddn\\Desktop\\R_Language\\NetflixOriginals.csv")
 head(netflix_data)
 
 dim(netflix_data)
